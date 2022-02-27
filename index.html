@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-    <head>
-
-        <meta charset="UTF-8">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="description" content="hmmmmmmmmmmmmmmmmmmmmmm...">
-        
-        <meta name="keywords" content="hmmm6830, hmmm, hmmm#6830">
-
-        <title>hmmm</title>
-
-    </head>
-
-    <body>
-
-    hmmm... lol
-
-    </body>
-
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>hmmm</title>
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+         * {
+         box-sizing: border-box;
+         }
+         body {
+         background-color: #2d3342;
+         color: #fff;
+         font-family: 'Secular One', sans-serif;
+         flex-direction: column;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         margin: 0;
+         }
+         h1 {
+         font-size: 70px;
+         margin: 0;
+         }
+         p {
+         color: rgba(88, 101, 242, 0.8);
+         letter-spacing: 2px;
+         margin: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <p>This page was viewed</p>
+      <h1 id="count">0</h1>
+      <p>times</p>
+      <script>
+         const countEl = document.getElementById("count");
+         countvisits();
+         
+         function countvisits() {
+           fetch('https://api.countapi.xyz/update/hmmm6830/discord/?amount=1')
+             .then((res) => res.json())
+             .then((res) => {
+               countEl.innerHTML = res.value;
+             });
+         }
+      </script>
+   </body>
 </html>
